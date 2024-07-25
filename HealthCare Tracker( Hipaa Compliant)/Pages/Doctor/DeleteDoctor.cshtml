@@ -1,0 +1,32 @@
+﻿@page
+@using System.Data.SqlClient
+@{
+
+    try
+    {
+        String id = Request.Query["id"];
+
+        string connectionString = "Data Source=DESKTOP-QOQD6ET;Initial Catalog=HealthCareManagementSystem;Integrated Security=True;Encrypt=False";
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string selectQuery = "Delete FROM Doctor WHERE DoctorID = @id";
+
+            using (SqlCommand command = new SqlCommand(selectQuery, connection))
+            {
+                command.Parameters.AddWithValue("@id", id);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+    }
+    catch(Exception e)
+    {
+        e.Message.ToString();
+    }
+    Response.Redirect("/Doctor/Index");
+
+}

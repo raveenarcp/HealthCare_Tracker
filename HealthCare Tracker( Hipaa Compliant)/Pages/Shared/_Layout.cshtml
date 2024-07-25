@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to HealthCare Management System - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        #main-content {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">HealthCare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container">
+        <main role="main" class="pb-3" id="main-content">
+            @RenderBody()
+        </main>
+
+        <div class="text-center mt-4">
+            <h4>Quick Access</h4>
+            <div class="btn-group" role="group">
+                <a class="btn btn-primary" asp-area="" asp-page="/Patient/Index">Patients</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Doctor/Index">Doctors</a>
+
+                <!-- Additional buttons -->
+                <a class="btn btn-primary" asp-area="" asp-page="/Visit">Schedule Visit</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Treatment/Treatment"> Treatment</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Prescription">Generate Prescription</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Admission/Admission">Admission</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Billing">View Billing Details</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/Payment">View Payment Details</a>
+                <a class="btn btn-primary" asp-area="" asp-page="/PatientCoveragePlan">Create Coverage Plans for Patients</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - HealthCare - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

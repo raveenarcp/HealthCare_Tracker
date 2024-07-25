@@ -1,0 +1,54 @@
+﻿@page
+@model HealthCare.Pages.ScheduleVisitModel
+@{
+    ViewData["Title"] = "Schedule Visit";
+}
+
+<h2>Schedule Visit</h2>
+
+@if (TempData["VisitID"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        Visit scheduled successfully! Visit ID: @TempData["VisitID"]
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="PatientID">Patient:</label>
+        <select class="form-control" asp-for="PatientID" required>
+            <option value="">Select Patient</option>
+            @foreach (var patient in Model.Patients)
+            {
+                <option value="@patient.Value">@patient.Text</option>
+            }
+        </select>
+        <span asp-validation-for="PatientID" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DoctorID">Category:</label>
+        <select class="form-control" asp-for="DoctorID" required>
+            <option value="">Select Category</option>
+            @foreach (var doctor in Model.Doctors)
+            {
+                <option value="@doctor.Value">@doctor.Text</option>
+            }
+        </select>
+        <span asp-validation-for="DoctorID" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="VisitDate">Visit Date:</label>
+        <input type="date" class="form-control" asp-for="VisitDate" required />
+        <span asp-validation-for="VisitDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Purpose">Purpose:</label>
+        <input type="text" class="form-control" asp-for="Purpose" required />
+        <span asp-validation-for="Purpose" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Schedule</button>
+</form>

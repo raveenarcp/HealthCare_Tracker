@@ -1,0 +1,95 @@
+﻿@page
+@model HealthCare.Pages.Patient.IndexModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management System</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px; /* Reduced padding */
+            text-align: left;
+            font-size: 8px; /* Reduced font size */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 6px 6px; /* Adjust padding for buttons */
+            font-size: 8px; /* Reduced font size for buttons */
+            text-decoration: none; /* Remove underline for links */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Patient Details</h2>
+
+    <a asp-page="/Patient/CreatePatient" class="btn btn-primary">Create Patient</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>PatientID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>DateOfBirth</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>PhoneNumber</th>
+                <th>EmergencyContact</th>
+                <th>BloodType</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.patientList)
+            {
+                Console.WriteLine(@item.PatientID);
+                <tr>
+                    <td>@item.PatientID</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.DateOfBirth</td>
+                    <td>@item.Gender</td>
+                    <td>@item.Email</td>
+                    <td>@item.Address</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.EmergencyContact</td>
+                    <td>@item.BloodType</td>
+                    <td>
+                        <a asp-page="/Patient/UpdatePatient" asp-route-id="@item.PatientID" class="btn btn-primary btn-sm">Update</a>
+
+                        <a asp-page="/Patient/DeletePatient" asp-route-id="@item.PatientID" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    
+</body>
+</html>

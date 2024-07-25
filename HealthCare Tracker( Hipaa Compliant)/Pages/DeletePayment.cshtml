@@ -1,0 +1,34 @@
+﻿
+
+@page
+@using System.Data.SqlClient
+@{
+
+    try
+    {
+        String paymentId = Request.Query["paymentId"];
+
+        string connectionString = "Data Source=DESKTOP-QOQD6ET;Initial Catalog=HealthCareManagementSystem;Integrated Security=True;Encrypt=False";
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string deleteQuery = "DELETE FROM Payment WHERE PaymentID = @paymentId";
+
+            using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+            {
+                command.Parameters.AddWithValue("@paymentId", paymentId);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+    }
+    catch(Exception e)
+    {
+        e.Message.ToString();
+    }
+    Response.Redirect("/Payment");
+
+}

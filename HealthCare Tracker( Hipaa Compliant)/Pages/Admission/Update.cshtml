@@ -1,0 +1,80 @@
+﻿
+@page
+@model HealthCare.Pages.Admission.UpdateAdmissionModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Admission</title>
+    <style>
+        form {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Update Admission</h2>
+
+    <form method="post">
+
+        <input type="hidden" name="AdmissionID" value="@Model.UpdateAdmission.AdmissionID" />
+       
+        <div>
+            <label for="TreatmentID">Treatment ID:</label>
+            <input type="text" id="TreatmentID" name="TreatmentID" asp-for="@Model.UpdateAdmission.TreatmentID" required>
+        </div>
+
+        <div>
+            <label for="RoomID">Room ID:</label>
+            <input type="text" id="RoomID" name="RoomID" asp-for="@Model.UpdateAdmission.RoomID" required>
+        </div>
+
+        <div>
+            <label for="AdmissionDate">Admission Date:</label>
+            <input type="date" id="AdmissionDate" name="AdmissionDate" asp-for="@Model.UpdateAdmission.AdmissionDate" required>
+        </div>
+
+        <div>
+            <label for="DischargeDate">Discharge Date:</label>
+            <input type="date" id="DischargeDate" name="DischargeDate" asp-for="@Model.UpdateAdmission.DischargeDate">
+        </div>
+
+        <div>
+            <label for="AdmissionReason">Admission Reason:</label>
+            <input type="text" id="AdmissionReason" name="AdmissionReason" asp-for="@Model.UpdateAdmission.AdmissionReason" required>
+        </div>
+
+        <div>
+            <label for="Status">Status:</label>
+            <input type="text" id="Status" name="Status" asp-for="@Model.UpdateAdmission.Status" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

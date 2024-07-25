@@ -1,0 +1,40 @@
+﻿@page
+@model HealthCare.Pages.TreatmentListModel
+@{
+    ViewData["Title"] = "Treatment List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (Model.Treatmentslist != null && Model.Treatmentslist.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>TreatmentID</th>
+                <th>TreatmentName</th>
+                <th>TreatmentFees</th>
+                <th>VisitID</th>
+                <th>Admit_Flag</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var treatment in Model.Treatmentslist)
+            {
+                <tr>
+                    <td>@treatment.TreatmentID</td>
+                    <td>@treatment.TreatmentName</td>
+                    <td>@treatment.TreatmentFees</td>
+                    <td>@treatment.VisitID</td>
+                    <td>@treatment.Admit_Flag</td>
+                    <td>@treatment.Notes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No treatments found.</p>
+}

@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HealthCare
+build_property.RootNamespace = HealthCare
+build_property.ProjectDir = C:\Users\Raveena Patil\source\repos\HealthCare\HealthCare\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Raveena Patil\source\repos\HealthCare\HealthCare
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Admission/Admission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaXNzaW9uXEFkbWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Admission/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaXNzaW9uXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Billing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlsbGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/DeletePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Doctor/CreateDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yXENyZWF0ZURvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Doctor/DeleteDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yXERlbGV0ZURvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Doctor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Doctor/UpdateDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yXFVwZGF0ZURvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/PatientCoveragePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudENvdmVyYWdlUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Patient/CreatePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFxDcmVhdGVQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Patient/DeletePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFxEZWxldGVQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Patient/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Patient/UpdatePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFxVcGRhdGVQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Prescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJlc2NyaXB0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Treatment/Treatment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50XFRyZWF0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Treatment/ViewTreatment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50XFZpZXdUcmVhdG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/ViewVisit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1Zpc2l0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Visit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raveena Patil/source/repos/HealthCare/HealthCare/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ubyuebopo8

@@ -1,0 +1,46 @@
+﻿@page
+@model HealthCare.Pages.InsertTreatmentModel
+@{
+    ViewData["Title"] = "Insert Treatment";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (!string.IsNullOrEmpty(TempData["SuccessMessage"]?.ToString()))
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@if (!string.IsNullOrEmpty(TempData["ErrorMessage"]?.ToString()))
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="VisitID">Visit ID:</label>
+        <select class="form-control" asp-for="VisitID" required>
+            <option value="">-- Select Visit ID --</option>
+            @foreach (var visitId in Model.VisitIDs)
+            {
+                <option value="@visitId">@visitId</option>
+            }
+        </select>
+        <span asp-validation-for="VisitID" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="TreatmentFees">Treatment Fees:</label>
+        <input type="number" class="form-control" asp-for="TreatmentFees" required>
+        <span asp-validation-for="TreatmentFees" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Admit_Flag">Admit Type:</label>
+        <select class="form-control" asp-for="Admit_Flag" required>
+            <option value="">-- Select Admit Type --</option>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+        </select>
+        <span asp-validation-for="Admit_Flag" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

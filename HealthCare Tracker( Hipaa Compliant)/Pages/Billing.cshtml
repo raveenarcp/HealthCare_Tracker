@@ -1,0 +1,32 @@
+﻿@page
+@model BillingModel
+
+<h2>Billing Records</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Bill ID</th>
+            <th>Billing Amount</th>
+            <th>Date Issued</th>
+            <th>Status</th>
+            <th>Visit ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model.BillingRecords)
+        {
+            <tr>
+                <td>@record.BillID</td>
+                <td>@record.BillingAmount</td>
+                <td>@record.DateIssued</td>
+                <td>@record.Status</td>
+                <td>@record.VisitID</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="post">
+    <button type="submit" asp-page-handler="Refresh">Refresh</button>
+</form>

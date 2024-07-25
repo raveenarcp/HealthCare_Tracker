@@ -1,0 +1,88 @@
+﻿@page
+@model HealthCare.Pages.Doctor.DcotorModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor List</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            font-size: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 6px 6px;
+            font-size: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Doctor Details</h2>
+
+    <a asp-page="/Doctor/CreateDoctor" class="btn btn-primary">Create Doctor</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>DoctorID</th>
+                <th>DoctorName</th>
+                <th>LicenseNumber</th>
+                <th>YearsOfExperience</th>
+                <th>Education</th>
+                <th>AvailabilitySchedule</th>
+                <th>Specialization</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.doctorList)
+            {
+                Console.WriteLine(@item.DoctorID);
+                <tr>
+                    <td>@item.DoctorID</td>
+                    <td>@item.DoctorName</td>
+                    <td>@item.LicenseNumber</td>
+                    <td>@item.YearsOfExperience</td>
+                    <td>@item.Education</td>
+                    <td>@item.AvailabilitySchedule</td>
+                    <td>@item.Specialization</td>
+                    <td>
+                        <a asp-page="/Doctor/UpdateDoctor" asp-route-id="@item.DoctorID" class="btn btn-primary btn-sm">Update</a>
+
+                        <a asp-page="/Doctor/DeleteDoctor" asp-route-id="@item.DoctorID" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

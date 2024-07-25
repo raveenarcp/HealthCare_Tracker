@@ -1,0 +1,67 @@
+﻿
+@page
+@model PaymentModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            font-size: small; /* Adjust the font size as needed */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Add a background color to header cells */
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Records</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Payment ID</th>
+                <th>Bill ID</th>
+                <th>Plan ID</th>
+                <th>Total Amount</th>
+                <th>Payment Date</th>
+                <th>Amount Covered By Insurance</th>
+                <th>Amount To Be Paid</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var payment in Model.PaymentRecords)
+            {
+                <tr>
+                    <td>@payment.PaymentID</td>
+                    <td>@payment.BillID</td>
+                    <td>@payment.PlanID</td>
+                    <td>@payment.TotalAmount</td>
+                    <td>@payment.PaymentDate</td>
+                    <td>@payment.AmountCoveredByInsurance</td>
+                    <td>@payment.AmountToBePaid</td>
+                    <td>
+                        <a href="/DeletePayment?paymentId=@payment.PaymentID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form method="post">
+        <button type="submit" asp-page-handler="Refresh">Refresh</button>
+
+    </form>
+</body>
+</html>

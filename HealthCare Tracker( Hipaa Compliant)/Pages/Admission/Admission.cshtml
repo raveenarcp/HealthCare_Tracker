@@ -1,0 +1,60 @@
+﻿
+@page
+@model HealthCare.Pages.Admission.IndexModel
+@{
+    ViewData["Title"] = "Admissions";
+}
+
+<h2>Admissions</h2>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary" asp-page-handler="InsertAdmission">Insert Admission</button>
+</form>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>AdmissionID</th>
+            <th>TreatmentID</th>
+            <th>RoomID</th>
+            <th>AdmissionDate</th>
+            <th>DischargeDate</th>
+            <th>AdmissionReason</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var admission in Model.Admissions)
+        {
+            <tr>
+                <td>@admission.AdmissionID</td>
+                <td>@admission.TreatmentID</td>
+                <td>@admission.RoomID</td>
+                <td>@admission.AdmissionDate</td>
+                <td>@admission.DischargeDate</td>
+                <td>@admission.AdmissionReason</td>
+                <td>@admission.Status</td>
+                <td>
+                   
+                    <a asp-page="/Admission/Update" asp-route-id="@admission.AdmissionID" class="btn btn-primary btn-sm">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

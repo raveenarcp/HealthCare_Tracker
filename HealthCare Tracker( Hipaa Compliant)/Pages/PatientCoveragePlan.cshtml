@@ -1,0 +1,51 @@
+﻿
+
+@page
+@model HealthCare.Pages.PatientCoveragePlanModel
+@{
+    ViewData["Title"] = "Patient Coverage Plan";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (!string.IsNullOrEmpty(TempData["SuccessMessage"]?.ToString()))
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@if (!string.IsNullOrEmpty(TempData["ErrorMessage"]?.ToString()))
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="SelectedPatientId">Select Patient:</label>
+        <select class="form-control" asp-for="SelectedPatientId" required>
+            <option value="">-- Select Patient --</option>
+            @if (Model.Patientslist != null)
+            {
+                foreach (var patient in Model.Patientslist)
+                {
+                    <option value="@patient.PatientID">@patient.FirstName</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="SelectedPatientId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="SelectedPlanId">Select Plan:</label>
+        <select class="form-control" asp-for="SelectedPlanId" required>
+            <option value="">-- Select Plan --</option>
+            @if (Model.CoveragePlans != null)
+            {
+                foreach (var plan in Model.CoveragePlans)
+                {
+                    <option value="@plan.PlanID">@plan.PlanName</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="SelectedPlanId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Plan
+</form>

@@ -1,0 +1,37 @@
+﻿@page
+@model YourNamespace.Pages.VisitModel
+@{
+    ViewData["Title"] = "Visit Page";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>VisitID</th>
+            <th>VisitDate</th>
+            <th>Purpose</th>
+            <th>Status</th>
+            <th>DoctorID</th>
+            <th>PatientID</th>
+            <th>DoctorName</th>
+            <th>PatientName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var visit in Model.Visits)
+        {
+            <tr>
+                <td>@visit.VisitID</td>
+                <td>@visit.VisitDate</td>
+                <td>@visit.Purpose</td>
+                <td>@visit.Status</td>
+                <td>@visit.DoctorID</td>
+                <td>@visit.PatientID</td>
+                <td>@visit.DoctorName</td>
+                <td>@visit.PatientName</td>
+            </tr>
+        }
+    </tbody>
+</table>
